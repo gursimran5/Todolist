@@ -1,0 +1,17 @@
+
+<div >
+<form  (ngSubmit)="onSubmit()">
+    <div class="col-md-4 mb-3">
+      <label for="Title" class="form-label">Todo title</label>
+      <input type="text"class="form-control " name="title" id="title"
+        [(ngModel)]="title">
+     
+    </div>
+    <div class=" col-md-4  mb-3">
+      <label for="exampleInputPassword1" class="form-label  ">         Desc</label>
+      <input type="desc" class="form-control "  name="desc" id="desc" [(ngModel)]="desc">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+  </div>

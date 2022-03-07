@@ -1,0 +1,25 @@
+  
+<div class="container" >
+    <h1 class="text-center mb-3">Todo List by  <font color="red">Simran</font></h1>
+
+  
+
+ <app-add-myproject (myprojectAdd)="addMyproject($event)" >
+    
+ </app-add-myproject><br>
+ <br>
+ <h2>Your todos</h2>
+  <div *ngIf="this.myprojects.length===0; else elseBlock"><font color="green">no display.</font></div>
+ <ng-template #elseBlock> 
+
+    <div *ngFor="let myproject of myprojects ">
+
+
+    <app-myproject-item [myproject]="myproject" 
+     (myprojectDelete)="deleteMyproject($event)" (myprojectCheckbox)="toggleMyproject($event)">
+
+    </app-myproject-item>
+    
+    </div>
+    </ng-template>
+</div>
